@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ND940C3-Project</string>
+    <string name="app_name">LoadApp</string>
     <string name="app_description">Download files from Internet</string>
     <string name="action_settings">Settings</string>
 
@@ -11,4 +11,25 @@
     <string name="button_name">Click me</string>
     <string name="button_loading">We are loading </string>
     <string name="title_activity_detail">DetailActivity</string>
+    <string name="channel_download_complete">Download Complete</string>
+    <string name="loading">we are loading</string>
+    <string name="downloading">Downloading</string>
+    <string name="download">Download</string>
+    <string name="download_failed">Downloading %s failed</string>
+    <string name="download_success">%s Downloading Success</string>
+    <string name="download_notification_title">Download status update</string>
+    <string name="show_details">Show Details</string>
+    <string name="message_no_option_selected">Select an option to Download</string>
+
+    <string-array name="download_option_names">
+        <item>Glide-Image Loading Library by BumpTech</item>
+        <item>LoadApp - Current repository by Udacity</item>
+        <item>Retrofit - Type - Safe HTTP Client for Android and </item>
+    </string-array>
+
+    <string-array name="download_option_urls">
+        <item>https://github.com/bumptech/glide/archive/master.zip</item>
+        <item>https://file-examples-com.github.io/uploads/2017/02/zip_9MB.zip</item>
+        <item>https://github.com/square/retrofit/archive/master.zip</item>
+    </string-array>
 </resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="channel_download_completed" type="id"/>
+    <string name="channel_download_completed_name">Download Completed</string>
+</resources>
