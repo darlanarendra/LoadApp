@@ -5,4 +5,5 @@
     <color name="colorAccent">#F9A825</color>
     <color name="white">#FFFFFF</color>
     <color name="colorSecondary">#ffb74d</color>
+    <color name="successCardColor">#005005</color>
 </resources>

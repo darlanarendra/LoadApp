@@ -1,70 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_detail">
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+app:layoutDescription="@xml/content_detail_scene"
+tools:context=".DetailsActivity"
+tools:showIn="@layout/activity_detail">
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/status_card"
+    style="@style/AppTheme.MaterialCard"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/successCardColor"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="30dp"
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/status_icon"
-        android:layout_width="@dimen/hundred_dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="@dimen/ten_dp"
-        android:src="@drawable/ic_success"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginEnd="@dimen/twenty_dp"
-        android:layout_marginStart="@dimen/twenty_dp"/>
-    <TextView
-        android:id="@+id/download_title_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/ten_dp"
-        android:text="@string/download_title"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginEnd="@dimen/twenty_dp"
-        android:layout_marginStart="@dimen/twenty_dp"
-        app:layout_constraintTop_toBottomOf="@+id/status_icon" />
+        android:src="@drawable/ic_success"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+</com.google.android.material.card.MaterialCardView>
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/download_title_layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    app:boxCornerRadiusTopStart="16dp"
+    app:layout_constraintEnd_toEndOf="@id/status_card"
+    app:layout_constraintStart_toStartOf="@id/status_card"
+    app:layout_constraintTop_toBottomOf="@id/status_card">
+
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/download_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/ten_dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginEnd="@dimen/twenty_dp"
-        android:layout_marginStart="@dimen/twenty_dp"
-        app:layout_constraintTop_toBottomOf="@+id/download_title_label" />
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="@string/download_title"
+        android:inputType="none"
+        tools:text="Glide" />
 
-    <TextView
-        android:id="@+id/download_id_label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/ten_dp"
-        android:layout_marginEnd="@dimen/twenty_dp"
-        android:layout_marginStart="@dimen/twenty_dp"
-        android:text="@string/download_id"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/download_title" />
+</com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/download_id_layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    app:boxCornerRadiusTopStart="16dp"
+    app:layout_constraintEnd_toEndOf="@id/status_card"
+    app:layout_constraintStart_toStartOf="@id/status_card"
+    app:layout_constraintTop_toBottomOf="@id/download_title_layout">
+
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/download_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/ten_dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/download_id_label"
-        android:layout_marginEnd="@dimen/twenty_dp"
-        android:layout_marginStart="@dimen/twenty_dp"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="@string/download_id"
+        android:inputType="none"
+        tools:text="39" />
+
+</com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
