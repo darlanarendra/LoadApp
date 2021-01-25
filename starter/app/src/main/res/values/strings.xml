@@ -2,12 +2,9 @@
     <string name="app_name">LoadApp</string>
     <string name="app_description">Download files from Internet</string>
     <string name="action_settings">Settings</string>
-
-
     <string name="notification_title">Udacity: Android Kotlin Nanodegree </string>
     <string name="notification_description">The Project 3 repository is downloaded</string>
     <string name="notification_button">See changes</string>
-
     <string name="button_name">Click me</string>
     <string name="button_loading">We are loading </string>
     <string name="title_activity_detail">DetailActivity</string>
@@ -22,16 +19,14 @@
     <string name="message_no_option_selected">Select an option to Download</string>
     <string name="download_id">Download ID</string>
     <string name="download_title">Download Title</string>
-
     <string-array name="download_option_names">
         <item>Glide-Image Loading Library by BumpTech</item>
         <item>LoadApp - Current repository by Udacity</item>
         <item>Retrofit - Type - Safe HTTP Client for Android and </item>
     </string-array>
-
     <string-array name="download_option_urls">
         <item>https://github.com/bumptech/glide/archive/master.zip</item>
-        <item>https://file-examples-c00om.github.io/uploads/2017/02/zip_9MB.zip</item>
+        <item>https://github.com/udacity/nd940-c3-advanced-android-programming-project-starter/archive/master.zip</item>
         <item>https://github.com/square/retrofit/archive/master.zip</item>
     </string-array>
 </resources>
