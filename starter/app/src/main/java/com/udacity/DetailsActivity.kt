@@ -3,6 +3,7 @@ package com.udacity
 import android.app.DownloadManager
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.udacity.databinding.ActivityDetailBinding
 import com.udacity.utils.DownloadDetails
@@ -16,6 +17,7 @@ class DetailsActivity:AppCompatActivity() {
 
     companion object{
         const val EXTRA_DETAILS = "details"
+        val TAG = DetailsActivity::class.java.simpleName
     }
 
     private lateinit var downloadDetails: DownloadDetails
@@ -28,7 +30,9 @@ class DetailsActivity:AppCompatActivity() {
         downloadDetails = intent.getParcelableExtra(EXTRA_DETAILS) ?:return
         cancelNotification(downloadDetails.id)
         with(binding.contentDetail){
+            Log.v(TAG, "DetailsActivity"+ downloadDetails.status)
             if(downloadDetails.status == DownloadManager.STATUS_FAILED){
+                Log.v(TAG, "DetailsActivity"+ downloadDetails.status)
                 statusIcon.setImageResource(R.drawable.ic_error)
                 downloadTitle.contentDescription = "Download Failed"
             }else{

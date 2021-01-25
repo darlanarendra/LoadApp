@@ -2,4 +2,7 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="default_text_size">20sp</dimen>
+    <dimen name="ten_dp">10dp</dimen>
+    <dimen name="hundred_dp">100dp</dimen>
+    <dimen name="twenty_dp">20dp</dimen>
 </resources>

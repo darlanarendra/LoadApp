@@ -20,6 +20,8 @@
     <string name="download_notification_title">Download status update</string>
     <string name="show_details">Show Details</string>
     <string name="message_no_option_selected">Select an option to Download</string>
+    <string name="download_id">Download ID</string>
+    <string name="download_title">Download Title</string>
 
     <string-array name="download_option_names">
         <item>Glide-Image Loading Library by BumpTech</item>
@@ -29,7 +31,7 @@
 
     <string-array name="download_option_urls">
         <item>https://github.com/bumptech/glide/archive/master.zip</item>
-        <item>https://file-examples-com.github.io/uploads/2017/02/zip_9MB.zip</item>
+        <item>https://file-examples-c00om.github.io/uploads/2017/02/zip_9MB.zip</item>
         <item>https://github.com/square/retrofit/archive/master.zip</item>
     </string-array>
 </resources>
