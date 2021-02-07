@@ -32,6 +32,15 @@
         app:layout_constraintTop_toBottomOf="@+id/image"
         android:layout_margin="@dimen/twenty_dp"/>
 
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/custom_button" />
+
     <com.udacity.LoadingButton
         android:id="@+id/custom_button"
         android:layout_width="0dp"

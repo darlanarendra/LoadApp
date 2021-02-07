@@ -7,6 +7,8 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
@@ -40,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
         createDownloadOptions()
 
-        with (binding.contentMain.customButton) {
+        with(binding.contentMain.customButton) {
             buttonState = ButtonState.LOADING
 
             setOnClickListener {
@@ -49,6 +51,16 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+
+        binding.contentMain.sample.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+            if (event.action === KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+                Toast.makeText(this, binding.contentMain.sample.getText(), Toast.LENGTH_SHORT).show()
+                return@OnKeyListener true
+            }
+            false
+        })
+
     }
 
     private fun createDownloadOptions() {
